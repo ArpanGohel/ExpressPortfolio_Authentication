@@ -1,0 +1,46 @@
+<!--COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022-->
+
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/nav.ejs %>
+
+<main class="container">
+<!--Message Area-->
+<%if(messages.length > 0) {%>
+    <div class="alert alert-danger">
+        <%= messages %>
+    </div>
+<% } %>
+<br>
+  <div class="row">
+    <div class="offset-md-4 col-md-4">
+        <h1 style="color:antiquewhite"><u>Please Login</u></h1><br>
+        <form method="POST" autocomplete="off">
+            <fieldset class="form-group">
+                <label for="username" style="color:antiquewhite; font-size: large"> Username: </label><br><br>
+                <input type="text" class="form-control"
+                 name="username" placeholder="Enter Username"
+                 id="username" required autofocus>
+            </fieldset><br>
+
+            <fieldset class="form-group">
+                <label for="password" style="color:antiquewhite; font-size: large"> Password: </label><br><br>
+                <input type="password" class="form-control"
+                 name="password" placeholder="Enter Password"
+                 id="password" required>
+                 <br><br>
+                 <a href="/register" style="font-size: medium; color:antiquewhite">Register here</a>
+            </fieldset><br>
+
+            <fieldset class="form-group text-right">
+                <input type="submit" class="btn btn-success" value="Login">
+            <a href="/" >
+                <input type="button" class="btn btn-warning" value="Cancel">
+            </a>
+            </fieldset>
+        </form>
+    </div>
+  </div>
+</main>
+
+<%- include ../partials/footer.ejs %>

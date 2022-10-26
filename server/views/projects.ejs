@@ -1,0 +1,36 @@
+<!--COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022-->
+
+<%- include partials/header.ejs %>
+ <%- include partials/nav.ejs %>
+<main>
+  <h2 style="color:antiquewhite; margin-top:1%;margin-left:5%; text-align:center;"><u>Some of my Projects Overview:</u></h2>
+    
+   <div id="projectbody">
+    <img style="width:250px; float:left;"src="/assets/images/bmr.png">
+      <br>
+       <h4><u>BMR Calculator:</u></h4>
+         <p>This is a BMR calculator which can tell your BMR based on the details entered by user like Age,
+            Height, Weight, Gender, and Activity level. It has two unit systems to choose from, Metric and Imperial 
+            Unit system. It will also tell your daily calorie intake.  
+          </p>
+        <a href="/assets/images/bmr.png">Click here to enlarge the image!</a>
+      <br><br><br><br>
+    <img style="width:250px; float:left;"src="/assets/images/weatherapp.png">
+      <br>
+        <h4><u>Weather Application:</u></h4>
+          <p>This application is designed for telling the weather information of any city name entered by the user using
+            Google Weather API. You can view the weather for upto four cities together on one page and displays temperature,
+            feels like, humidity, wind speed including weather icon.</p>
+          <a href="/assets/images/weatherapp.png">Click here to enlarge the image!</a>
+        <br>
+      <br>
+    <img style="width:250px; float:left;"src="/assets/images/table.png">
+      <br>
+        <h4><u>Table Generator:</u></h4>
+          <p>Thiis is a table generator app. Upon loading, it will prompt the user to enter number of rows and
+            number of columns and then it will prepare the table along with the index numbers for you as shown in picture.   
+          </p>
+          <a href="/assets/images/table.png">Click here to enlarge the image!</a>
+  </div>
+</main>
+<%- include partials/footer.ejs %>

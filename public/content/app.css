@@ -1,0 +1,27 @@
+/*COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022 */
+
+#allPage{
+  width: 980px;
+margin-right: auto;
+margin-left: auto;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("/assets/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+#projectbody{
+  width: 1000px;
+  color:antiquewhite;
+  float: right;
+  font-size: larger;
+  margin-left: 25%;
+  text-align:center;
+}
