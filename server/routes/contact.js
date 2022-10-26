@@ -5,7 +5,7 @@ let mongoose = require('mongoose');
 let passport = require('passport');
 
 // connect to our Contacts Model
-let Contact = require('../models/contact');
+//let Contact = require('../models/contact');
 
 let contactController = require('../controllers/contact');
 
@@ -21,7 +21,7 @@ function requireAuth(req, res, next)
 }
 
 //GET Route for the contact list page - READ operation
-router.get('/', requireAuth, contactController.displayContactList);
+router.get('/', contactController.displayContactList);
 
 //GET Route for displaying Add page - CREATE Operation
 router.get('/add', requireAuth, contactController.displayAddPage);

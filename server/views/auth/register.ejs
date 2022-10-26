@@ -1,11 +1,11 @@
 <!--COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022-->
 
-<%- include ../partials/header.ejs %>
-<%- include ../partials/nav.ejs %>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/nav.ejs') %>
 
 <main class="container">
     <!--Message Area-->
-    <%if(messages.length > 0) {%>
+    <% if(messages.length > 0) {%>
         <div class="alert alert-danger">
             <%= messages %>
         </div>
@@ -54,4 +54,4 @@
     </div>
  </main>
 
-<%- include ../partials/footer.ejs %>
+<%- include ('../partials/footer.ejs') %>

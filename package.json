@@ -28,7 +28,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "ExpressPortfolio_Authentication",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ArpanGohel/ExpressPortfolio_Authentication.git"

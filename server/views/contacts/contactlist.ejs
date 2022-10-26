@@ -1,7 +1,7 @@
 <!--COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022-->
 
-<%- include ../partials/header.ejs %>
-<%- include ../partials/nav.ejs %>
+<%- include ('../partials/header.ejs') %>
+<%- include ('../partials/nav.ejs') %>
 
 <!--Main content-->
 <main class="container">
@@ -16,23 +16,23 @@
             <br><br>
             <table class="table table-bordered table-striped table-hover">
                 <!--Header Row-->
-                <tr>
+                <tr class="d-flex">
                     <% if(typeof displayName == 'string' && displayName) { %>
-                        <th class="text-center col-4" style="color:antiquewhite">Contact Name</th>
-                        <th class="text-center col-4" style="color:antiquewhite">Contact Number</th>
+                        <th class="text-center col-3" style="color:antiquewhite">Contact Name</th>
+                        <th class="text-center col-3" style="color:antiquewhite">Contact Number</th>
                         <th class="text-center col-4" style="color:antiquewhite">Contact Email</th>
                         <th class="text-center col-1"></th>
                         <th class="text-center col-1"></th>
                     <% } else { %>
                         <th class="text-center col-4" style="color:antiquewhite">Contact Name</th>
-                        <th class="text-center col-4" style="color:antiquewhite">Contact Number</th>
+                        <th class="text-center col-3" style="color:antiquewhite">Contact Number</th>
                         <th class="text-center col-4" style="color:antiquewhite">Contact Email</th>
                     <% } %>
                 </tr>
 
                 <!--Repeatable template row-->
                 <% for(let count = 0; count < ContactList.length; count++) { %>
-                    <tr>
+                    <tr class="d-flex">
                         <% if(typeof displayName == 'string' && displayName) { %>
                             <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].name %></td>
                             <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].number %></td>
@@ -46,7 +46,7 @@
                                     <i class="fas fa-trash-alt"></i>Delete</a>
                             </td> 
                         <% } else { %> 
-                            <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].name %></td>
+                            <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].name %></td>
                             <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].number %></td>
                             <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].email %></td>
                         <% } %> 
@@ -57,4 +57,4 @@
     </div>
 </main>
 
-<%- include ../partials/footer.ejs %>
+<%- include ('../partials/footer.ejs') %>

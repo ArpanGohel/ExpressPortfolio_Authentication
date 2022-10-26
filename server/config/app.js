@@ -70,6 +70,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+//routing
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/contact-list', contactsRouter);

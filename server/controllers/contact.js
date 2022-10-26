@@ -42,7 +42,6 @@ module.exports.processAddPage = (req, res, next) => {
         { 
             //refresh the contact list
             res.redirect('/contact-list');
-         
         }
     });
 }
@@ -71,7 +70,7 @@ module.exports.processEditPage = (req, res, next) => {
     let id = req.params.id;
 
     let updatedContact = Contact({
-        "id": id,
+        "_id": id,
         "name": req.body.name,
         "number" : req.body.number,
         "email" : req.body.email

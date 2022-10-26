@@ -1,7 +1,8 @@
 <!--COMP 229-Express Portfolio Site - Student name: Arpan Gohel - StudentID:300565463 - Oct05,2022-->
 
-<%- include partials/header.ejs %>
- <%- include partials/nav.ejs %>
+<%- include ('partials/header.ejs') %>
+<%- include ('partials/nav.ejs') %>
+
 <main>
   <h2 style="color:antiquewhite; text-align: center; margin-top:10%;"><u>Please fill in your details and message to contact me:</u></h2>
     <form style="color:antiquewhite; text-align:left; margin-top:5%; margin-left:10%;">
@@ -19,4 +20,5 @@
           <input type="submit" value="Submit">                <input type="reset" value="Reset">
     </form>
 </main>
-<%- include partials/footer.ejs %>   
+
+<%- include ('partials/footer.ejs') %>   
