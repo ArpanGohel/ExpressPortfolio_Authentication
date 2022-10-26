@@ -21,12 +21,12 @@
                         <th class="text-center col-3" style="color:antiquewhite">Contact Name</th>
                         <th class="text-center col-3" style="color:antiquewhite">Contact Number</th>
                         <th class="text-center col-4" style="color:antiquewhite">Contact Email</th>
-                        <th class="text-center col-1"></th>
-                        <th class="text-center col-1"></th>
+                        <th class="text-center col-2"></th>
+                        <th class="text-center col-2"></th>
                     <% } else { %>
-                        <th class="text-center col-4" style="color:antiquewhite">Contact Name</th>
-                        <th class="text-center col-3" style="color:antiquewhite">Contact Number</th>
-                        <th class="text-center col-4" style="color:antiquewhite">Contact Email</th>
+                        <th class="text-center col-3" style="color:antiquewhite">Contact Name</th>
+                        <th class="text-center col-4" style="color:antiquewhite">Contact Number</th>
+                        <th class="text-center col-5" style="color:antiquewhite">Contact Email</th>
                     <% } %>
                 </tr>
 
@@ -37,18 +37,18 @@
                             <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].name %></td>
                             <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].number %></td>
                             <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].email %></td>
-                            <td class="text-center col-1">
+                            <td class="text-center col-2">
                                 <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary btn-sm">
                                     <i class="fas fa-pencil-alt"></i>Edit</a>
                             </td>
-                            <td class="text-center col-1">
+                            <td class="text-center col-2">
                                 <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger btn-sm">
                                     <i class="fas fa-trash-alt"></i>Delete</a>
                             </td> 
                         <% } else { %> 
-                            <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].name %></td>
-                            <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].number %></td>
-                            <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].email %></td>
+                            <td class="text-center col-3" style="color:antiquewhite"><%= ContactList[count].name %></td>
+                            <td class="text-center col-4" style="color:antiquewhite"><%= ContactList[count].number %></td>
+                            <td class="text-center col-5" style="color:antiquewhite"><%= ContactList[count].email %></td>
                         <% } %> 
                     </tr>
                 <% } %>
