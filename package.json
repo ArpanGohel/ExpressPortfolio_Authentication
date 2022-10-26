@@ -1,6 +1,6 @@
 {
-  "name": "assignment01-express-portfolio-site",
-  "version": "0.0.1",
+  "name": "assignment02-express-portfolio-authentication",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
@@ -27,19 +27,18 @@
     "passport-local-mongoose": "^7.1.2",
     "popper.js": "^1.16.1"
   },
-  "description": "Portfolio Site",
+  "description": "ExpressPortfolio_Authentication",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArpanGohel/Express-Portfolio_Site.git"
+    "url": "git+https://github.com/ArpanGohel/ExpressPortfolio_Authentication.git"
   },
   "author": "Arpan Gohel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArpanGohel/Express-Portfolio_Site/issues"
+    "url": "https://github.com/ArpanGohel/ExpressPortfolio_Authentication/issues"
   },
-  "homepage": "https://github.com/ArpanGohel/Express-Portfolio_Site#readme",
-  
+  "homepage": "https://github.com/ArpanGohel/ExpressPortfolio_Authentication#readme",
   "devDependencies": {
     "@types/connect-flash": "^0.0.37",
     "@types/express": "^4.17.14",
