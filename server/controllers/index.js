@@ -130,6 +130,8 @@ module.exports.processRegisterPage = (req, res, next) => {
 }
 
 module.exports.performLogout = (req, res, next) => {
-    req.logout();
+    req.logout(function(err){
+      if(err){return next(err);}
     res.redirect('/');
+    });
 }
