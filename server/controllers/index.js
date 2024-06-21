@@ -9,31 +9,31 @@ let passport = require('passport');
 let userModel = require('../models/user')
 let User = userModel.User; //alias
 
-module.exports.displayHomePage = (req, res, next) => {
+module.exports.displayHomePage = (req, res) => {
     res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayHomePage = (req, res, next) => {
+module.exports.displayHomePage = (req, res) => {
     res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayAboutPage = (req, res, next) => {
+module.exports.displayAboutPage = (req, res) => {
     res.render('about', {title: 'About Me', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayProjectsPage = (req, res, next) => {
+module.exports.displayProjectsPage = (req, res) => {
     res.render('projects', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayServicesPage = (req, res, next) => {
+module.exports.displayServicesPage = (req, res) => {
     res.render('services', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayContactPage = (req, res, next) => {
+module.exports.displayContactPage = (req, res) => {
     res.render('contact', {title: 'Contact Me', displayName: req.user ? req.user.displayName : ''});
 }
 
-module.exports.displayLoginPage = (req, res, next) => {
+module.exports.displayLoginPage = (req, res) => {
     // check if the user is already logged in
     if(!req.user)
     {
@@ -92,7 +92,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
     }
 }
 
-module.exports.processRegisterPage = (req, res, next) => {
+module.exports.processRegisterPage = (req, res) => {
     //instantiate a user object
     let newUser = new User({
         username: req.body.username,

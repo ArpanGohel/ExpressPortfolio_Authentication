@@ -7,7 +7,7 @@ let mongoose = require('mongoose');
 // Create a reference to the model 
 let Contact = require('../models/contact');
 
-module.exports.displayContactList = (req, res, next) => {
+module.exports.displayContactList = (req, res) => {
     Contact.find((err, contactList) => {
         if(err)
         {
@@ -15,7 +15,7 @@ module.exports.displayContactList = (req, res, next) => {
         }
         else
         {
-            //console.log(ContactList);
+            console.log(ContactList);
             res.render('contacts/contactlist', {title: 'Business Contacts List', 
             ContactList: contactList,
             displayName: req.user ? req.user.displayName : '' });
@@ -23,18 +23,18 @@ module.exports.displayContactList = (req, res, next) => {
     });
 }
 
-module.exports.displayAddPage = (req, res, next) => {
+module.exports.displayAddPage = (req, res) => {
     res.render('contacts/add', {title: 'Add Contact', displayName: req.user ? req.user.displayName : ''})
 }
 
-module.exports.processAddPage = (req, res, next) => {
+module.exports.processAddPage = (req, res) => {
     let newContact = Contact({
         "name": req.body.name,
         "number" : req.body.number,
         "email" : req.body.email
     });
 
-    Contact.create(newContact, (err, Contact) => {
+    Contact.create(newContact, (err) => {
         if(err)
         {
             console.log(err);
@@ -48,7 +48,7 @@ module.exports.processAddPage = (req, res, next) => {
     });
 }
 
-module.exports.displayEditPage = (req, res, next) => {
+module.exports.displayEditPage = (req, res) => {
     let id = req.params.id;
 
     Contact.findById(id, (err, contactToEdit) => {
@@ -68,7 +68,7 @@ module.exports.displayEditPage = (req, res, next) => {
 
 }
 
-module.exports.processEditPage = (req, res, next) => {
+module.exports.processEditPage = (req, res) => {
     let id = req.params.id;
 
     let updatedContact = Contact({
@@ -92,7 +92,7 @@ module.exports.processEditPage = (req, res, next) => {
     });
 }
 
-module.exports.performDelete = (req, res, next) => {
+module.exports.performDelete = (req, res) => {
     let id = req.params.id;
 
     Contact.remove({_id: id}, (err) => {
